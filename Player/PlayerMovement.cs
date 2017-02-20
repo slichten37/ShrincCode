@@ -70,15 +70,22 @@ public class PlayerMovement : MonoBehaviour {
             }
 
             if (input != Vector2.zero) {
-				StartCoroutine (Move(transform));
-			}
+                if (Input.GetAxisRaw("Horizontal") > 0.5f || Input.GetAxisRaw("Horizontal") < -0.5f) ;
+                {
+                    transform.Translate(new Vector3(Input.GetAxisRaw("Horizontal") * walkSpeed * Time.deltaTime, 0f, 0f));
+                }
+                if (Input.GetAxisRaw("Vertical") > 0.5f || Input.GetAxisRaw("Vertical") < -0.5f);
+                {
+                    transform.Translate(new Vector3(0f, Input.GetAxisRaw("Vertical") * walkSpeed * Time.deltaTime, 0f));
+                }
+            }
 		}
 
 
 
 	}
 
-	public IEnumerator Move(Transform entity)
+	/*public IEnumerator Move(Transform entity)
 	{
 		isMoving = true;
 		startPos = entity.position;
@@ -95,7 +102,7 @@ public class PlayerMovement : MonoBehaviour {
 
 		isMoving = false;
 		yield return 0;
-	}
+	}*/
 
 	enum Direction
 	{
