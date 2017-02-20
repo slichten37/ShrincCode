@@ -11,7 +11,7 @@ public class PlayerMovement : MonoBehaviour {
 	Vector3 endPos;
 	float t;
 
-	public float walkSpeed = 3f;
+	public float walkSpeed = 10f;
     public Sprite northSprite;
     public Sprite eastSprite;
     public Sprite westSprite;
@@ -19,15 +19,15 @@ public class PlayerMovement : MonoBehaviour {
 
     // Use this for initialization
     void Start () {
-		
+
 	}
-	
+
 	// Update is called once per frame
 	void Update () {
 
 		if (!isMoving) {
 
-            
+
 
 
             input = new Vector2 (Input.GetAxis ("Horizontal"), Input.GetAxis ("Vertical"));
@@ -112,4 +112,3 @@ public class PlayerMovement : MonoBehaviour {
 		West
 	}
 }
-
