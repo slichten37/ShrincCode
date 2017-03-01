@@ -13,7 +13,11 @@ public class TextBoxManager : MonoBehaviour {
     public int currentLine;
     public int endAtLine;
 
+    public bool isActive;
+
     public PlayerMovement player;
+
+    public bool stopPlayerMovement;
 
     // Use this for initialization
     void Start()
@@ -31,10 +35,23 @@ public class TextBoxManager : MonoBehaviour {
             endAtLine = textLines.Length - 1;
         }
 
+        if(isActive)
+        {
+            EnableTextBox();
+        } else
+        {
+            DisableTextBox();
+        }
+
     }
 
     void Update()
     {
+
+        if(!isActive)
+        {
+            return;
+        }
 
         theText.text = textLines[currentLine];
 
@@ -45,8 +62,37 @@ public class TextBoxManager : MonoBehaviour {
 
         if (currentLine > endAtLine)
         {
-            textBox.SetActive(false);
+            DisableTextBox();
         }
 
+    }
+
+    public void EnableTextBox()
+    {
+        textBox.SetActive(true);
+        isActive = true;
+
+        if (stopPlayerMovement)
+        {
+            player.canMove = false;
+        }
+    }
+
+    public void DisableTextBox()
+    {
+        textBox.SetActive(false);
+        isActive = false;
+
+        player.canMove = true;
+    }
+
+    public void ReloadScript(TextAsset theText)
+    {
+        if(theText != null)
+        {
+            textLines = new string[1];
+            textLines = (theText.text.Split('\n'));
+
+        }
     }
 }

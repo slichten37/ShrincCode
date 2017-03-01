@@ -17,6 +17,8 @@ public class PlayerMovement : MonoBehaviour {
     public Sprite westSprite;
     public Sprite southSprite;
 
+    public bool canMove;
+
     // Use this for initialization
     void Start () {
 
@@ -25,10 +27,12 @@ public class PlayerMovement : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
+        if (!canMove)
+        {
+            return;
+        }
+
 		if (!isMoving) {
-
-
-
 
             input = new Vector2 (Input.GetAxis ("Horizontal"), Input.GetAxis ("Vertical"));
 			if (Mathf.Abs(input.x) > Mathf.Abs(input.y))
