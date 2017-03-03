@@ -43,6 +43,8 @@ public class TextBoxManager : MonoBehaviour {
             DisableTextBox();
         }
 
+        //theText.position = textBox.transform;
+
     }
 
     void Update()

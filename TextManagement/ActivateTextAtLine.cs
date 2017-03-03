@@ -15,6 +15,9 @@ public class ActivateTextAtLine : MonoBehaviour {
     public bool requireButtonPress;
     public bool waitForButtonPress;
 
+    public bool isReady;
+    public ActivateTextAtLine nextBox;
+
 
     // Use this for initialization
     void Start() {
@@ -24,6 +27,31 @@ public class ActivateTextAtLine : MonoBehaviour {
 
     // Update is called once per frame
     void Update() {
+
+        if (!isReady)
+        {
+            return;
+        }
+
+        if (waitForButtonPress && Input.GetKeyDown(KeyCode.Return))
+        {
+            theTextBox.ReloadScript(theText);
+            theTextBox.currentLine = startLine;
+            theTextBox.endAtLine = endLine;
+            theTextBox.EnableTextBox();
+
+            if (destroyWhenActivated)
+            {
+                if (nextBox != null)
+                {
+                    nextBox.setIsReady(true);
+                }
+                Destroy(gameObject);
+            }
+
+        }
+
+
 
     }
 
@@ -48,11 +76,20 @@ public class ActivateTextAtLine : MonoBehaviour {
         if (destroyWhenActivated)
         {
             Destroy(gameObject);
+            nextBox.setIsReady(true);
         }
     }
 
     void OnTriggerExit2D(Collider2D other)
     {
+        if (other.name == "Player")
+        {
+            waitForButtonPress = false;
+        }
+    }
 
+    void setIsReady(bool ready)
+    {
+        isReady = ready;
     }
 }

@@ -11,7 +11,7 @@ public class PlayerMovement : MonoBehaviour {
 	Vector3 endPos;
 	float t;
 
-	public float walkSpeed = 10f;
+	public float walkSpeed = 20f;
     public Sprite northSprite;
     public Sprite eastSprite;
     public Sprite westSprite;
