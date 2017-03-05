@@ -18,10 +18,13 @@ public class ActivateTextAtLine : MonoBehaviour {
     public bool isReady;
     public ActivateTextAtLine nextBox;
 
+    public AlertMovement alert;
+
 
     // Use this for initialization
     void Start() {
         theTextBox = FindObjectOfType<TextBoxManager>();
+        alert = FindObjectOfType<AlertMovement>();
 
     }
 
@@ -42,6 +45,7 @@ public class ActivateTextAtLine : MonoBehaviour {
 
             if (destroyWhenActivated)
             {
+                alert.GetComponent<Renderer>().enabled = false;
                 if (nextBox != null)
                 {
                     nextBox.setIsReady(true);
@@ -61,6 +65,10 @@ public class ActivateTextAtLine : MonoBehaviour {
         {
             if (requireButtonPress)
             {
+                if (isReady)
+                {
+                    alert.GetComponent<Renderer>().enabled = true;
+                }
                 waitForButtonPress = true;
                 return;
             }
@@ -84,6 +92,7 @@ public class ActivateTextAtLine : MonoBehaviour {
     {
         if (other.name == "Player")
         {
+            alert.GetComponent<Renderer>().enabled = false;
             waitForButtonPress = false;
         }
     }
