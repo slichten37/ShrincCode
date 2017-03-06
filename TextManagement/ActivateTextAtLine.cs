@@ -38,6 +38,7 @@ public class ActivateTextAtLine : MonoBehaviour {
 
         if (waitForButtonPress && Input.GetKeyDown(KeyCode.Return))
         {
+            isReady = false;
             theTextBox.ReloadScript(theText);
             theTextBox.currentLine = startLine;
             theTextBox.endAtLine = endLine;
@@ -52,6 +53,10 @@ public class ActivateTextAtLine : MonoBehaviour {
                 }
                 Destroy(gameObject);
             }
+            else
+            {
+                isReady = false;
+            }
 
         }
 
@@ -61,6 +66,10 @@ public class ActivateTextAtLine : MonoBehaviour {
 
     void OnTriggerEnter2D(Collider2D other)
     {
+        if (!destroyWhenActivated)
+        {
+            isReady = true;
+        }
         if (other.name == "Player")
         {
             if (requireButtonPress)
@@ -68,8 +77,8 @@ public class ActivateTextAtLine : MonoBehaviour {
                 if (isReady)
                 {
                     alert.GetComponent<Renderer>().enabled = true;
+                    waitForButtonPress = true;
                 }
-                waitForButtonPress = true;
                 return;
             }
 

@@ -19,6 +19,8 @@ public class TextBoxManager : MonoBehaviour {
 
     public bool stopPlayerMovement;
 
+    public ActivateTextAtLine currentCaller;
+
     // Use this for initialization
     void Start()
     {
@@ -42,6 +44,7 @@ public class TextBoxManager : MonoBehaviour {
         {
             DisableTextBox();
         }
+
 
         //theText.position = textBox.transform;
 
@@ -82,9 +85,9 @@ public class TextBoxManager : MonoBehaviour {
 
     public void DisableTextBox()
     {
+
         textBox.SetActive(false);
         isActive = false;
-
         player.canMove = true;
     }
 
