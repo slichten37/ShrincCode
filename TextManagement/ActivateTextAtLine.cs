@@ -20,6 +20,8 @@ public class ActivateTextAtLine : MonoBehaviour {
 
     public AlertMovement alert;
 
+    public bool autoActivate;
+
 
     // Use this for initialization
     void Start() {
@@ -36,7 +38,7 @@ public class ActivateTextAtLine : MonoBehaviour {
             return;
         }
 
-        if (waitForButtonPress && Input.GetKeyDown(KeyCode.Return))
+        if (waitForButtonPress && Input.GetKeyDown(KeyCode.Return) || autoActivate)
         {
             isReady = false;
             theTextBox.ReloadScript(theText);

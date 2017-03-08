@@ -3,7 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class TextBoxManager : MonoBehaviour {
+public class TextBoxOptions : MonoBehaviour
+{
 
     public GameObject textBox;
     public Text theText;
@@ -12,6 +13,7 @@ public class TextBoxManager : MonoBehaviour {
     public string[] textLines;
     public int currentLine;
     public int endAtLine;
+    public int numberOfOptions;
 
     public bool isActive;
 
@@ -21,12 +23,10 @@ public class TextBoxManager : MonoBehaviour {
 
     public ActivateTextAtLine currentCaller;
 
-    public int nextJump;
-
     // Use this for initialization
     void Start()
     {
-        nextJump = 1;
+
         player = FindObjectOfType<PlayerMovement>();
 
         if (textFile != null)
@@ -39,61 +39,36 @@ public class TextBoxManager : MonoBehaviour {
             endAtLine = textLines.Length - 1;
         }
 
-        if(isActive)
+        if (isActive)
         {
             EnableTextBox();
-        } else
+        }
+        else
         {
             DisableTextBox();
         }
 
-
-        //theText.position = textBox.transform;
 
     }
 
     void Update()
     {
 
-        if(!isActive)
+        if (!isActive)
         {
             return;
         }
 
-        if (textLines[currentLine].StartsWith("Z:"))
-        {
-            theText.text = textLines[currentLine] + "\n" + textLines[currentLine + 1] + "\n" + textLines[currentLine + 2];
-            if (Input.GetKeyDown(KeyCode.Z))
-            {
-                currentLine += 3;
-                nextJump = 3;
+        theText.text = textLines[currentLine] + "\n" + textLines[currentLine];
 
-            }
-            if (Input.GetKeyDown(KeyCode.X))
-            {
-                currentLine += 4;
-                nextJump = 2;
-            }
-            if (Input.GetKeyDown(KeyCode.C))
-            {
-                currentLine += 5;
-                nextJump = 1;
-            }
+        if (Input.GetKeyDown(KeyCode.Return))
+        {
+            currentLine += 1;
         }
-        else
+
+        if (currentLine > endAtLine)
         {
-            theText.text = textLines[currentLine];
-
-            if (Input.GetKeyDown(KeyCode.Return))
-            {
-                currentLine += nextJump;
-                nextJump = 1;
-            }
-
-            if (currentLine > endAtLine)
-            {
-                DisableTextBox();
-            }
+            DisableTextBox();
         }
 
     }
@@ -119,7 +94,7 @@ public class TextBoxManager : MonoBehaviour {
 
     public void ReloadScript(TextAsset theText)
     {
-        if(theText != null)
+        if (theText != null)
         {
             textLines = new string[1];
             textLines = (theText.text.Split('\n'));
