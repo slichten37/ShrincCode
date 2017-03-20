@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -40,6 +41,7 @@ public class ActivateTextAtLine : MonoBehaviour {
 
         if (waitForButtonPress && Input.GetKeyDown(KeyCode.Return) || autoActivate)
         {
+
             isReady = false;
             theTextBox.ReloadScript(theText);
             theTextBox.currentLine = startLine;

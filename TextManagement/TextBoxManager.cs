@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -12,6 +13,7 @@ public class TextBoxManager : MonoBehaviour {
     public string[] textLines;
     public int currentLine;
     public int endAtLine;
+    public int next;
 
     public bool isActive;
 
@@ -21,12 +23,9 @@ public class TextBoxManager : MonoBehaviour {
 
     public ActivateTextAtLine currentCaller;
 
-    public int nextJump;
-
     // Use this for initialization
     void Start()
     {
-        nextJump = 1;
         player = FindObjectOfType<PlayerMovement>();
 
         if (textFile != null)
@@ -60,46 +59,56 @@ public class TextBoxManager : MonoBehaviour {
             return;
         }
 
-        if (textLines[currentLine].StartsWith("Z:"))
+        if (textLines[currentLine].Contains("*"))
         {
-            theText.text = textLines[currentLine] + "\n" + textLines[currentLine + 1] + "\n" + textLines[currentLine + 2];
+            theText.text = textLines[currentLine].Substring(3, textLines[currentLine].Length - 8) + "\n" + textLines[currentLine + 1].Substring(3, textLines[currentLine].Length - 8) + "\n" + textLines[currentLine + 2].Substring(3, textLines[currentLine].Length - 8);
             if (Input.GetKeyDown(KeyCode.Z))
             {
-                currentLine += 3;
-                nextJump = 3;
+                int x = textLines[currentLine].Length;
+                next = int.Parse(textLines[currentLine].Substring(x - 5, 3));
+                setNext(next);
 
             }
             if (Input.GetKeyDown(KeyCode.X))
             {
-                currentLine += 4;
-                nextJump = 2;
+                int x = textLines[currentLine + 1].Length;
+                next = int.Parse(textLines[currentLine + 1].Substring(x - 5, 3));
+                setNext(next);
             }
             if (Input.GetKeyDown(KeyCode.C))
             {
-                currentLine += 5;
-                nextJump = 1;
+                int x = textLines[currentLine + 2].Length;
+                next = int.Parse(textLines[currentLine + 2].Substring(x - 5, 3));
+                setNext(next);
+            }
+        }
+        else if (textLines[currentLine].Contains("$"))
+        {
+            theText.text = textLines[currentLine].Substring(3, textLines[currentLine].Length - 8);
+
+            if (Input.GetKeyDown(KeyCode.Return))
+            {
+                int x = textLines[currentLine].Length;
+
+                next = int.Parse(textLines[currentLine].Substring(x - 5, 3));
+                setNext(next);
             }
         }
         else
         {
-            theText.text = textLines[currentLine];
-
+            theText.text = textLines[currentLine].Substring(3, textLines[currentLine].Length - 4);
             if (Input.GetKeyDown(KeyCode.Return))
-            {
-                currentLine += nextJump;
-                nextJump = 1;
-            }
-
-            if (currentLine > endAtLine)
             {
                 DisableTextBox();
             }
         }
+        
 
     }
 
     public void EnableTextBox()
     {
+
         textBox.SetActive(true);
         isActive = true;
 
@@ -124,6 +133,23 @@ public class TextBoxManager : MonoBehaviour {
             textLines = new string[1];
             textLines = (theText.text.Split('\n'));
 
+        }
+    }
+
+    public void setNext(int x)
+    {
+        String s = x.ToString();
+        while (s.Length < 3)
+        {
+            s = "0" + s;
+        }
+        for (int i = 0; i < textLines.Length; i++)
+        {
+            if (textLines[i].StartsWith(s))
+            {
+                currentLine = i;
+                return;
+            }
         }
     }
 }

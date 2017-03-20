@@ -84,9 +84,6 @@ public class PlayerMovement : MonoBehaviour {
                 }
             }
 		}
-
-
-
 	}
 
 	/*public IEnumerator Move(Transform entity)
