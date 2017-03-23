@@ -12,7 +12,6 @@ public class TextBoxManager : MonoBehaviour {
     public TextAsset textFile;
     public string[] textLines;
     public int currentLine;
-    public int endAtLine;
     public int next;
 
     public bool isActive;
@@ -31,11 +30,6 @@ public class TextBoxManager : MonoBehaviour {
         if (textFile != null)
         {
             textLines = (textFile.text.Split('\n'));
-        }
-
-        if (endAtLine == 0)
-        {
-            endAtLine = textLines.Length - 1;
         }
 
         if(isActive)
@@ -61,7 +55,7 @@ public class TextBoxManager : MonoBehaviour {
 
         if (textLines[currentLine].Contains("*"))
         {
-            theText.text = textLines[currentLine].Substring(3, textLines[currentLine].Length - 8) + "\n" + textLines[currentLine + 1].Substring(3, textLines[currentLine].Length - 8) + "\n" + textLines[currentLine + 2].Substring(3, textLines[currentLine].Length - 8);
+            theText.text = textLines[currentLine].Substring(3, textLines[currentLine].Length - 8) + "\n" + textLines[currentLine + 1].Substring(3, textLines[currentLine + 1].Length - 8) + "\n" + textLines[currentLine + 2].Substring(3, textLines[currentLine + 2].Length - 8) + "\n" + textLines[currentLine + 3].Substring(3, textLines[currentLine + 3].Length - 8);
             if (Input.GetKeyDown(KeyCode.Z))
             {
                 int x = textLines[currentLine].Length;
@@ -79,6 +73,12 @@ public class TextBoxManager : MonoBehaviour {
             {
                 int x = textLines[currentLine + 2].Length;
                 next = int.Parse(textLines[currentLine + 2].Substring(x - 5, 3));
+                setNext(next);
+            }
+            if (Input.GetKeyDown(KeyCode.V))
+            {
+                int x = textLines[currentLine + 3].Length;
+                next = int.Parse(textLines[currentLine + 3].Substring(x - 5, 3));
                 setNext(next);
             }
         }

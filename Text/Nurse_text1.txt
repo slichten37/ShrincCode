@@ -1,0 +1,22 @@
+000 001$
+001(Carrie looks up from her computer on wheels and smiles at you broadly)002$
+002Carrie: Good morning, Dr. Moore! I've got something fun for you today!003$
+003Carrie: It's a real bread-and-butter case, the kind of thing we see all the time.004$
+004Carrie: Bill Carter is a twenty five year old male without a known psychiatric or medical history, other than some cannabis use.005$
+005Carrie: Well, the Orange County Sheriff caught him doing 120 miles an hour on the freeway at two this morning.006$
+006Carrie: He can't really explain what he was doing; he's just over there muttering some nonsense about Kim Kardashian.007$
+007You: Huh, that's weird. Anything else?008$
+008Carrie: Well, I know that Dr. Grace will want you to figure out the diagnosis for yourself, but I'll give you a little background...009$
+009Carrie: He's psychotic, though that's just a symptom and not a diagnosis. There is a lot we don't know about his disease, and we especially don't know why people get it.010$
+010Carrie: There are a lot of weird risk factors, like being born in winter, living in a big city, or late paternal age.011$
+011Carrie: It's probably some of that genes + environment stuff.012$
+012Carrie: Men and women are at equal risk, and it affects about 1% of the population, but up to half the people that end up in psych hospitals.013$
+013Carrie: Oh, and do you remember about dopamine from medical school?014$
+014You: Yeah, it's a neurotransmitter.015$
+015Carrie: Right. The really simplified model is that too much dopamine makes you go weird and start hallucinating and acting strange.016$
+016Carrie: And street drugs like cocaine or meth, which also increase dopamine, can cause a lot of similar symptoms.017$
+017You: Is he high on something?018$
+018Carrie: He had cannabis in his urine tox screen, but nothing else.019$
+019Carrie: Heavy cannabis use is a risk factor too. But i think a lot of this is just him.020$
+020You: Well, I guess we'll see. Thanks as always, Carrie.021$
+021Carrie: You're welcome! Oh, and cover your nose. The BO is strong with this one.

@@ -1,0 +1,22 @@
+000 001$
+001(You approach the patient, who is stretched out on the bed with a blanket covering all of his body except the circle of his face. his eyes are wide, actually a little too wide.)002$
+002You: Hi, I'm Dr. Moore.003$
+003Bill: No, you're not. You're Candi De-light, or at least you used to be.004$
+004You: Ummm... ok. Hm. So, what brought you into the hospital?005$
+005Bill: A car.006$
+006You: No, I mean why are you in the hospital.007$
+007Bill: Oh, why didn't you say so? I'm in witness protection.008$
+008You: What are you being protected from?009$
+009Bill: The KGB! I was on my way to Kim Kardashian's house when the message came on the radio that shots had been fired at the scene, and I was ordered to immediately report for guard duty.010$
+010Bill: So I went down the highway as fast as I can, because I-40 goes all the way to Hollywood...011$
+011Bill: But I only got as far as Efland, because the police pulled me over.012$
+012You: The report says something about you going over 120 miles an hour. Is that why you got pulled over?013$
+013Bill: No, it's because they had orders that I was too important an agent, so I had to be put in witness protection, which is here.014$
+014Bill: They wanted me to be in the hand. And you know, a bird in the hand is worth two in the bush...015$
+015Bill: ...who I protected when he was president.016$
+016You: This sounds like it was kind of frightening. Now that you are here, do you feel safe?017$
+017Bill: Well, I guess. I mean, the one nurse is in MI-6, and sometimes she whispers me a secret message from Pippa Middleton. We're engaged.018$
+018You: Okaaaaay. Do you have any medical problems?019$
+019Bill: I have a-fib. I also have b-fib, c-fib, and d-fib.020$
+020You: I guess we'll need an EKG then. Anything else?021$
+021Bill: Just for you to tell Pippa that I'm here.

@@ -7,7 +7,6 @@ public class ActivateTextAtLine : MonoBehaviour {
 
     public TextAsset theText;
     public int startLine;
-    public int endLine;
 
     public TextBoxManager theTextBox;
 
@@ -45,7 +44,6 @@ public class ActivateTextAtLine : MonoBehaviour {
             isReady = false;
             theTextBox.ReloadScript(theText);
             theTextBox.currentLine = startLine;
-            theTextBox.endAtLine = endLine;
             theTextBox.EnableTextBox();
 
             if (destroyWhenActivated)
@@ -88,7 +86,6 @@ public class ActivateTextAtLine : MonoBehaviour {
 
             theTextBox.ReloadScript(theText);
             theTextBox.currentLine = startLine;
-            theTextBox.endAtLine = endLine;
             theTextBox.EnableTextBox();
 
         }
