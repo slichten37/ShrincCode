@@ -1,0 +1,10 @@
+000 001$
+001(Bill Carter lays on his bed, but at an odd angle. His arms are strangely bent, and you can see his muscles contracted tightly under his skin. His neck is also twisted around to the left to a degree that should only be anatomically possible for an owl.)002$
+002You: Oh, crap. Mr. Carter? Are you OK?003$
+003(He looks up at you sideways, not moving his head)004$
+004Bill: Do I look ok? I can't move. And it hurts like the worst cramps I've ever had.005$
+005You: Ok, one sec. Let me try to move your arm a little. (You try to extend his right arm at the elbow, but fail because of how tight he is.)006$
+006Bill: OW! YOU S.O.B.!007$
+007You: Oh, gosh! Sorry, sorry.008$
+008(Carrie calls to you from the nursing station)009$
+009Carrie: Hey Doc! Come here for a second!

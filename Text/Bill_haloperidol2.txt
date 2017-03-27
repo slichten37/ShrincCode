@@ -1,0 +1,15 @@
+000 001$
+001(Bill Carter grunts uncomfortably)002$
+002Bill: So, this is from the meds?003$
+003You: Yes sir, but we can do something about it.004$
+004Bill: Humph. It hurts. I don't ever want to feel this way again.005$
+005You:  Well, we can give you some of this benztropine regularly, to stave it off. Or we can try a different antipsychotic.006$
+006Bill: If this anti-cramp medicine works, it'll be alright.007$
+007You: So, how are you feeling otherwise?008$
+008Bill: Fine, I think.009$
+009You: Any concerns about Kim Kardashian?010$
+010Bill: Who? Why would I be concerned about her? I think they need to put you in here.011$
+011You: What about the nurse whispering to you?012$
+012Bill: No, that'd be freaking weird.013$
+013You: Glad you are better, Mr. Carter.014$
+014Bill: If you say so. 

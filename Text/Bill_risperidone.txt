@@ -1,0 +1,14 @@
+000 001$
+001(Bill Carter seems to be enjoying his breakfast. He appears to be having eggs, bacon, toast, french toast, sausage, hashbrowns, cereal,... oh, wait, there's a second plate. More eggs, and a waffle. My, that's a lot of syrup.)002$
+002You: Morning, Mr. Carter. You seem... hungry.003$
+003Bill: Yeah? So? Can't a man have what he wants fro breakfast?004$
+004You: Sure, I mean, it was just small talk. But is this what you usually eat?005$
+005Bill: Nah. Usually just a bowl of cereal. I'm hungry this morning.006$
+006You: Ok, so, you don't have diabetes or anything, right? (yet?)007$
+007Bill: No. Why would I have that? I'm a normal weight.008$
+008You: Let's just make sure it stays that way. Any concerns about Kim Kardashian?009$
+009Bill: Who? Why would I care? With questions like that, I think they need to put you in here.010$
+010You: What about hearing whispers?011$
+011Bill: No... Now, do you mind? I'm trying to eat.012$
+012You: I'm glad you're better, Mr. Carter.013$
+013Bill: If you say so.

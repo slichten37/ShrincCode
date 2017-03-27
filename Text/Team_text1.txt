@@ -1,0 +1,111 @@
+﻿000 999$
+999(Dr. Grace is sitting at the table patiently, waiting for team to start. She has a large stack of papers, and is holding her reading glasses)001$
+001Dr. G: Good morning, Samantha, how are you?002$
+002Z: You: Fine, thanks.006*
+003X: You: Actually, kind of rough.007*
+004C: 002*
+005V: 002*
+006Dr. G: I'm glad to hear it.008$
+007Dr. G: I'm sorry to hear that. Maybe a little coffee after team?008$
+008Dr. G: Well, shall we get started?009$
+009You: Sure. Bill Carter is a 25 year old male with a history of cannabis use, who presents after having been brought in by police for extreme speeding and erratic behavior.010$
+010Dr G: Hm. Is this his first time doing something strange? Was he on anything?011$
+011You: As far as we know he has no other psych history.  And just cannabis in the Utox.012$
+012Dr. G: What else?017%4
+013You: He says he's married to Pippa Middleton.018%
+014You: He says he's in witness protection023%
+015You: I think he called me a stripper name.024%
+016You: He seemed like a smart aleck028%
+017You: He just didn't make any sense real sense.034$
+018Dr. G: Oh, how interesting! People with his condition often become very concerned about famous people and things in the news.019$
+019Dr. G: They develop false beliefs about them, which are known as delusions if they persist.020$
+020You: He also said a nurse was whispering messages from Pippa to him.021$
+021Dr. G: Well, if that's really going on, we've got bigger problems. It sounds like he might be having auditory hallucinations.022$
+022Dr. G: Often times, people may describe hearing voices, but as whispers or just murmuring. They can have hallucinations of other things too, like music, sirens, or things crashing.012$
+023Dr. G: Huh, he thinks there's something he needs to be protected from. That sounds like pretty classic paranoia. And I bet he thinks he's a secret agent. We get that a lot.012$
+024Dr. G: What do you mean by that?025$
+025You: I tried to introduce myself, and he said I was someone else, named 'Candie De-light.'026$
+026Dr. G: Hah... well, I don't know who Candie De-light is, but they don't sound like a person who works at an academic medical center.027$
+027Dr. G: If he really thinks you are Candie, then that's something called a Fregoli delusion: a false belief that you are someone else from the patient's life.012$
+028Dr. G: What makes you say that?029$
+029You: When I asked him how he got here, he said 'a car.' Does he think I'm dumb or something?030$
+030Dr. G: Oh no, that's not what this is. Sometimes people lose the ability to understand or use abstract concepts.031$
+031Dr. G: When you asked him how he got here, he took the question literally. It's called being concrete.032$
+032Dr. G: It's like if I asked you what a watch and a ruler had in common, and you said they both have marks on them, or that they are both metal. 033$
+033Dr. G: The correct answer is that they both are used to measure things, but the concept of measurement is abstract, while the physical characteristics of something are concrete.012$
+034Dr. G: What do you mean?035$
+035You: Well, I'd ask him a question, and the answer would just be way out there. Bizarre. They kinda seemed like answers, but ultimately they just didn't make sense.036$
+036Dr. G: Yes, it sounds like he was disorganized. That's the medical term for being illogical. People can have disorganized thoughts, speech, and behavior.037$
+037Dr. G: You can think of it as not making good sense, not being able to work consistently towards a goal.038$
+038You: It sounds like there are a lot of ways to be disorganized.039$
+039Dr. G: Yes, it's a very broad term. with all that in mind, let's think about a diagnosis.040$
+040Dr. G: What are some things for our differential?048%7
+041You: Brief Psychotic disorder049%
+042You: Substance-induced psychotic disorder050%
+043You: Schizoaffective Disorder052%
+044You: Schizophrenia054%
+045You: Bipolar Disorder with psychosis061%
+046You: Delusional Disorder062%
+047You: Couldn't he just be ill medically063%
+048You: That might be just about it... I think I'm ready to pick a diagnosis065$
+049Dr. G: Certainly could be possible. Brief psychotic disorder and schizophreniform disorder have the same base criteria as schizophrenia. The distinctions all time based. Brief psychotic disorder is less than a month. Schizophreniform is 1-6 months, and schizophrenia is thereafter.040$
+050Dr. G: Of course! This is always one of the first things I suspect, especially in younger people. The urine toxicology screen and blood alcohol level are very important, and is getting a drug history if possible.051$
+051Dr. G: Of course, there are all kinds of awful things which don't show up on current Utoxes, but there are much less commonly used. I haven't seen a lot of K2, bath salts, or potpourri, but it does happen. More so in urban centers.040$
+052Dr. G: Yes, good to have on the differential for a psychotic person. To be schizoaffective, you have to have a major mood disturbance along with your psychosis, while still meeting the main criteria for schizophrenia. You also have to had had the psychosis at least briefly without the mood issues once over the course of your life, which means you are not bipolar.053$
+053Dr. G: It's a little hard to explain, but I'm sure you'll see some of these people soon.040$
+054Dr. G: For sure. He has delusions, and it sounds like hallucinations too. I would call his speech disorganized, the way you described it, and his speeding behavior seems off as well. I don't hear you saying anything about prominent negative symptoms, like amotivation or depression. He sounded plenty motivated to get to California.055$
+055You: Yeah, but he had it wrong. Everybody knows that Kim and Kanye live in Hidden Hills, not Hollywood.056$
+056Dr. G: I'm not going to ask how you know that... It IS too bad that we don't have a good sense of when he first became ill.057$
+057You: I do think a medical student got the family on the phone. I believe their statement was 'he ain't been right for years.'058$
+058Dr. G: Huh. Not exactly an ironclad time course.059$
+059You: Supposedly he's been worse lately.060$
+060Dr. G: Ok, we'll take it.040$
+061Dr. G: Certainly, it is a thing that happens. Now, if he were bipolar, I would expect a prominent mood component, like mania or depression. The mood issue should precede and be more prominent than the psychosis.040$
+062Dr. G: He is very delusional, isn't he? I have to say though, for it to be delusional disorder, the delusions have to be non-bizarre, like being shot or poisoned. And the patient can't show other signs of schizophrenia, which he does. Really, these people often seem to have it pretty well together, except for that one or few things they are really odd about.040$
+063Dr. G: Of course! We should always think about medical causes. It's an even bigger issue as people get older and are prone to delirium. This is one of the reasons we always get basic labs on our people. You know, a metabolic panel, CBC, TSH, Urine tox and analysis, maybe b12 and folate if we have a reason to suspect malnutrition.064$
+064Dr. G: And neurological illnesses are always possible too, like a tumor or epilepsy. We do sometimes get an MRI, EEG, or even lumbar puncture. Our suspicion has to be pretty high for that, though.040$
+065Dr. G: What shall we diagnose him with?066$
+066Z: You: Substance Induced Psychotic Disorder; he as marijuana in his U tox.070*
+067X: You: Well, assuming a long enough time, schizophrenia.072*
+068C: You: Bipolar Disorder. This crazy crap sounds manic.071*
+069V: 066*
+070Dr. G: Well, it certainly could be. Even marijuana by itself can make some people psychotic. But I though the time course was more chronic? 065$
+071Dr. G: Hah, yes manic people definitely do things like this, and can be very psychotic. But I didn't think he was endorsing any mood disturbance.065$
+072Dr. G: It does sound like it. Now, diagnoses in psychiatry are always subject to change as time passes and we get more information. But this is a pretty good working hypothesis. Now, let's think about treatment. Has he been violent?073$
+073You: No, just weird.074$
+074Dr. G: Great! So we will hopefully not need to force any medications. I hate giving people shots, but sometimes we have to. Often, psychotic people are distressed by their symptoms, and describe being anxious or unable to sleep. For that reason, I sometimes present medication as something to help them sleep, or 'take the edge off'.075$
+075Dr. G: Of course, if they understand that they are hallucinating, they usually want to make it stop and you can frame the suggestion in those terms. Often, patients with insight might have had the disease for a while, or might not be as ill as those who are wholly convinced of the things they are seeing and hearing.076$
+076You: Well, he seems pretty far gone. I don't think he's Pippa's type.077$
+077Dr. G: Well then, let's give him something.078$
+078Z: You: How about a benzodiazepine to chill him out?082*
+079X: You: Maybe he'd benefit from a mood stabilizer.083*
+080C: You: An antipsychotic. I don't know which one, though.084*
+081V: 078*
+082Dr. G: If he were a bit more agitated, absolutely I'd be willing to give him a little lorazepam. But that won't fix the biggest problem, per se.077$
+083Dr G: Patients with schizophrenia do often end up on mood stabilizers, but it's not the first thing we reach for.077$
+084Dr. G: Yes, that is the best way to start. Antipsychotics will target the most important symptoms, while also potentially providing a some sedation. They treat the positive symptoms, like hallucinations, a lot better than the negative symptoms. It usually reassures people when I say that we are good at shutting the voices up.085$
+085Dr. G: Now, for antipsychotics overall, what do you know about side effects and risks?086$
+086You: Well, the can cause seizures. And Torsades.087$
+087Dr. G: Take a little step back. We don't think of them as causing seizures usually, but rather decreasing the seizure threshold. And the frightening heart rhythm, Torsades de Pointes, is really a secondary result.088$
+088Dr. G: What they do is prolong the QT interval, the part that encompasses the depolarization and repolarization of the ventricles. We get EKGs on everyone we want to start on antipsychotics, to make sure their Qt is OK before we start. Often, we use the QTc, since it's an easy number to work with.089$
+089You: But, what do you do with a pyschotic person who has a long QTc?090$
+090Dr. G: Well, that's a risk-benefit analysis. Keeping their potassium above 4 and magnesium above 2 on your metabolic panel can help prevent problems. You can supplement if they are low. Honestly, we have to live with this risk a lot of the time. Some of these drugs are worse for the QTc than others, though, so you can make an informed decision.091$
+091You: OK, so there's two kinds of antipsychotics. Which should we start with?092$
+092Dr. G: I often pick based on the side effect profile. As you probably know, both first and second generation antipsychotics are thought to work via dopamine blockade. But the second generation drugs have some activity at other receptors too. Are you familiar with the side effect profile of the two classes?093$
+093You: Well, I think the short version is that the old ones make you stiff and twitchy, and the new ones make you fat.094$
+094Dr. G: Not too bad a generalization. You are right that the first generation agents are well know for extrapyramidal side effects. They can make patients feel very restless, which is know as akasthesia. Or they can cause dystonias, abnormal muscle contractions.095$
+095Dr. G:  You can often test for issues by trying to quickly move someone's arm up and down at the elbow. It their muscles resist you intermittently, that's called cogwheeling.096$
+096Dr. G: Of course, people also talk about tardive dyskinesia. TD is a real issue, because it can be irreversible. People with TD have involuntary movements, often of their face and lips, but sometimes other parts of the body. They often don't notice, but it freaks the people around them out. Honestly, TD was much more of a problem in the old days, when we used higher drug doses. You'll still see it though.097$
+097You: So, I know people often start with a second generation agent.098$
+098Dr. G: Often we do, but you don't have to. In person who is already obese or has issues with their blood sugar or cholesterol, it might be better to use the older drugs than something which will make them hungry all the time.099$
+099Dr. G:  But in young, healthy people, we will start these medications and get annual hemoglobin A1Cs and lipid panels, and track their weight. Second generation agents can be very sedating too, which can be an advantage or a disadvantage.100$
+100You: Mm hm.....101$
+101Dr. G: Oh, and at some point we should talk about clozapine. It's a super-special second gen drug, the strongest one. It's the only antipsychotic shown to reduce the risk of suicide, which is a huge deal in this population. But clozapine can kill you too, in other ways. If I've ever seen a 'miracle,' it has been with this drug. But it's definitely not first line.102$
+102Dr. G: So, Dr. Moore, I think that's enough of me talking. What shall we give the man?103$
+103Z: You: How about haloperidol, a first gen agent?107*
+104X: You: How about risperidone, a second gen agent?108*
+105C: 103*
+106V: 103*
+107Dr. G: Solid choice! I started people off with haloperidol all the time when I was a resident. We'll see how he does.~~1
+108Dr. G: sounds great! A lot of people reach for risperidone first, all other things being equal. I'll bet he'll be better after a few doses.~~2
+

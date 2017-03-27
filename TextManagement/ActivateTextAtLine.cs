@@ -18,9 +18,15 @@ public class ActivateTextAtLine : MonoBehaviour {
     public bool isReady;
     public ActivateTextAtLine nextBox;
 
+    public ActivateTextAtLine option1;
+    public ActivateTextAtLine option2;
+
     public AlertMovement alert;
 
     public bool autoActivate;
+
+    public GameObject[] NPCToHide;
+    public GameObject[] NPCToShow;
 
 
     // Use this for initialization
@@ -38,12 +44,20 @@ public class ActivateTextAtLine : MonoBehaviour {
             return;
         }
 
-        if (waitForButtonPress && Input.GetKeyDown(KeyCode.Return) || autoActivate)
+        if ((waitForButtonPress && Input.GetKeyDown(KeyCode.Return)) || (waitForButtonPress && autoActivate))
         {
 
             isReady = false;
             theTextBox.ReloadScript(theText);
             theTextBox.currentLine = startLine;
+            if (option1 != null)
+            {
+                theTextBox.option1 = option1;
+            }
+            if (option2 != null)
+            {
+                theTextBox.option2 = option2;
+            }
             theTextBox.EnableTextBox();
 
             if (destroyWhenActivated)
@@ -107,8 +121,26 @@ public class ActivateTextAtLine : MonoBehaviour {
         }
     }
 
-    void setIsReady(bool ready)
+    public void setIsReady(bool ready)
     {
         isReady = ready;
+    }
+
+    public void ShowHiddenNPCs()
+    {
+        for (int i = 0; i < NPCToShow.Length; i++)
+        {
+            NPCToShow[i].GetComponent<Renderer>().enabled = true;
+
+        }
+    }
+
+    public void HideVisibleNPCs()
+    {
+        for (int i = 0; i < NPCToHide.Length; i++)
+        {
+            NPCToHide[i].GetComponent<Renderer>().enabled = false;
+
+        }
     }
 }
