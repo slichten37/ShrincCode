@@ -6,6 +6,7 @@ public class OpenDoor : MonoBehaviour
 {
 
     public GameObject door;
+    public GameObject door2;
     public AlertMovement alert;
 
     public bool waitForButtonPress;
@@ -29,6 +30,8 @@ public class OpenDoor : MonoBehaviour
             {
                 door.GetComponent<Renderer>().enabled = false;
                 door.GetComponent<BoxCollider2D>().enabled = false;
+                door2.GetComponent<Renderer>().enabled = false;
+                door2.GetComponent<BoxCollider2D>().enabled = false;
             }
 
         }
@@ -51,6 +54,8 @@ public class OpenDoor : MonoBehaviour
             alert.GetComponent<Renderer>().enabled = false;
             door.GetComponent<Renderer>().enabled = true;
             door.GetComponent<BoxCollider2D>().enabled = true;
+            door2.GetComponent<Renderer>().enabled = true;
+            door2.GetComponent<BoxCollider2D>().enabled = true;
 
         }
     }

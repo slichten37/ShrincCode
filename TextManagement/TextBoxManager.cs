@@ -54,7 +54,7 @@ public class TextBoxManager : MonoBehaviour {
 
     }
 
-    void Update()
+    void Update() //different tags determine different kinds of dialogue progressions (tags: *, %, $, ~)
     {
 
         if(!isActive)
@@ -62,8 +62,13 @@ public class TextBoxManager : MonoBehaviour {
             return;
         }
 
-        if (textLines[currentLine].Contains("*"))
+        if (textLines[currentLine].Contains("*")) //4 options, each has its own line it can jump to.
         {
+            /****************
+             * Lots of parsing and substrings to account for the fact that each line has its 
+             * own serial number and line jumps encoded into the textline itself.
+             * 
+             ****************/
             theText.text = textLines[currentLine].Substring(3, textLines[currentLine].Length - 8) + "\n" + textLines[currentLine + 1].Substring(3, textLines[currentLine + 1].Length - 8) + "\n" + textLines[currentLine + 2].Substring(3, textLines[currentLine + 2].Length - 8) + "\n" + textLines[currentLine + 3].Substring(3, textLines[currentLine + 3].Length - 8);
             if (Input.GetKeyDown(KeyCode.Z))
             {
@@ -91,7 +96,7 @@ public class TextBoxManager : MonoBehaviour {
                 setNext(next);
             }
         }
-        else if (textLines[currentLine].Contains("$"))
+        else if (textLines[currentLine].Contains("$")) //basic line jump to next line
         {
             theText.text = textLines[currentLine].Substring(3, textLines[currentLine].Length - 8);
 
@@ -103,11 +108,17 @@ public class TextBoxManager : MonoBehaviour {
                 setNext(next);
             }
         }
-        else if (textLines[currentLine].Contains("%"))
+        else if (textLines[currentLine].Contains("%")) 
+            /****************************
+            * As many options as you want... after any option is chosen, the '%' at the end
+            * of the string is removed, marking that option as chosen. Once all options have been chosen
+            * the dialogue progresses to the 'next line' marked on the original currentLine
+            * 
+            *****************************/
         {
             if (!inOptions)
             {
-                theText.text = textLines[currentLine].Substring(3, textLines[currentLine].Length - 9);
+                theText.text = textLines[currentLine].Substring(3, textLines[currentLine].Length - 9); // the prompter
                 if (Input.GetKeyDown(KeyCode.Return))
                 {
                     inOptions = true;
@@ -121,18 +132,18 @@ public class TextBoxManager : MonoBehaviour {
                 int optionsLeft = 0;
                 for (int i = 1; i <= options; i++)
                 {
-                    if (textLines[currentLine + i].Contains("%")) {
+                    if (textLines[currentLine + i].Contains("%")) { 
                         optionsLeft++;
                     }
                 }
 
-                if(optionsLeft == 0)
+                if(optionsLeft == 0) //if all options chosen, jump to the proper post-options 'next line'
                 {
                     int x = textLines[currentLine].Length;
                     next = int.Parse(textLines[currentLine].Substring(x - 6, 3));
                     setNext(next);
                 }
-                else
+                else //display remaining available options (up to 4)
                 {
                     for (int i = 1; i <= options; i++)
                     {
@@ -148,7 +159,7 @@ public class TextBoxManager : MonoBehaviour {
                         }
                     }
                 }
-                if (Input.GetKeyDown(KeyCode.Z))
+                if (Input.GetKeyDown(KeyCode.Z)) // if option z is chosen, jump to the corresponding 'next line'
                 {
                     int a = optionTrackers[0]; //helps find which line to parse for nextLine
                     int x = textLines[currentLine + a].Length;
@@ -208,7 +219,7 @@ public class TextBoxManager : MonoBehaviour {
                 }
             }
         }
-        else if (textLines[currentLine].Contains("~"))
+        else if (textLines[currentLine].Contains("~")) //for ending the dialogue and choosing the proper option
         {
             theText.text = textLines[currentLine].Substring(3, textLines[currentLine].Length - 8);
             if (Input.GetKeyDown(KeyCode.Return))
@@ -228,7 +239,7 @@ public class TextBoxManager : MonoBehaviour {
                 DisableTextBox();
             }
         }
-        else
+        else //no progression options, dialogue just ends (no 'next Line', no tag).
         {
             theText.text = textLines[currentLine].Substring(3, textLines[currentLine].Length - 3);
             if (Input.GetKeyDown(KeyCode.Return))
@@ -240,13 +251,13 @@ public class TextBoxManager : MonoBehaviour {
 
     }
 
-    public void EnableTextBox()
+    public void EnableTextBox() //external call to begin dialogue stage.
     {
 
         textBox.SetActive(true);
         isActive = true;
 
-        if (stopPlayerMovement)
+        if (stopPlayerMovement) //freeze player during dialogue;
         {
             player.canMove = false;
         }
@@ -270,7 +281,7 @@ public class TextBoxManager : MonoBehaviour {
         }
     }
 
-    public void setNext(int x) //changes currentLine, changes which text is displayed.
+    public void setNext(int x) //changes currentLine, changes which text is displayed (based on the tag of the currentLine
     {
         String s = x.ToString();
         while (s.Length < 3)

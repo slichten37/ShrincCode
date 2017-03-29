@@ -37,7 +37,8 @@ public class ActivateTextAtLine : MonoBehaviour {
     }
 
     // Update is called once per frame
-    void Update() {
+    void Update()
+    {
 
         if (!isReady)
         {
@@ -58,29 +59,25 @@ public class ActivateTextAtLine : MonoBehaviour {
             {
                 theTextBox.option2 = option2;
             }
-            theTextBox.EnableTextBox();
+            theTextBox.EnableTextBox(); // begin dialogue stage after 'return' button press
 
-            if (destroyWhenActivated)
+            if (destroyWhenActivated) //remove shoutzone
             {
-                alert.GetComponent<Renderer>().enabled = false;
                 if (nextBox != null)
                 {
-                    nextBox.setIsReady(true);
+                    nextBox.setIsReady(true); // progress game state
                 }
+                alert.GetComponent<Renderer>().enabled = false;
                 Destroy(gameObject);
             }
             else
             {
                 isReady = false;
             }
-
         }
-
-
-
     }
 
-    void OnTriggerEnter2D(Collider2D other)
+    void OnTriggerEnter2D(Collider2D other) //when in the zone, prepare for a 'return' button press, which begins dialogue
     {
         if (!destroyWhenActivated)
         {
@@ -126,12 +123,15 @@ public class ActivateTextAtLine : MonoBehaviour {
         isReady = ready;
     }
 
-    public void ShowHiddenNPCs()
+    public void ShowHiddenNPCs() //for game state changes after dialogue
     {
         for (int i = 0; i < NPCToShow.Length; i++)
         {
             NPCToShow[i].GetComponent<Renderer>().enabled = true;
-
+            if (NPCToShow[i].GetComponent<BoxCollider2D>() != null)
+            {
+                NPCToShow[i].GetComponent<BoxCollider2D>().enabled = true;
+            }
         }
     }
 
@@ -140,7 +140,10 @@ public class ActivateTextAtLine : MonoBehaviour {
         for (int i = 0; i < NPCToHide.Length; i++)
         {
             NPCToHide[i].GetComponent<Renderer>().enabled = false;
-
+            if (NPCToHide[i].GetComponent<BoxCollider2D>() != null)
+            {
+                NPCToHide[i].GetComponent<BoxCollider2D>().enabled = false;
+            }
         }
     }
 }
