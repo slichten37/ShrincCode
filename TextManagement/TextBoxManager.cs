@@ -22,6 +22,7 @@ public class TextBoxManager : MonoBehaviour {
 
     public ActivateTextAtLine option1;
     public ActivateTextAtLine option2;
+    public ActivateTextAtLine nextBox;
 
     public bool inOptions;
 
@@ -244,6 +245,9 @@ public class TextBoxManager : MonoBehaviour {
             theText.text = textLines[currentLine].Substring(3, textLines[currentLine].Length - 3);
             if (Input.GetKeyDown(KeyCode.Return))
             {
+                nextBox.setIsReady(true);
+                nextBox.ShowHiddenNPCs();
+                nextBox.HideVisibleNPCs();
                 DisableTextBox();
             }
         }

@@ -59,6 +59,10 @@ public class ActivateTextAtLine : MonoBehaviour {
             {
                 theTextBox.option2 = option2;
             }
+            if (nextBox != null)
+            {
+                theTextBox.nextBox = nextBox;
+            }
             theTextBox.EnableTextBox(); // begin dialogue stage after 'return' button press
 
             if (destroyWhenActivated) //remove shoutzone

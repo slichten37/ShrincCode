@@ -1,0 +1,9 @@
+000 001$
+001You've Got Mail! (1 new message)002$
+0021 new message from Dr. Grace. Press 'Enter' to open.003$
+003Dear Dr. Moore,004$
+004Great work with Mr. Carter. You did a good job diagnosing the issue through your conversations with him and myself.005$
+005He seems to be responding well enough to your prescribed treatment, and will hopefully be well enough to leave in a few short days.006$
+006We appreciate your work, and as a 'thank-you', we've added a couch to your office. Keep up the good work, and your office will be luxurious before you know it!007$
+007Again, great job! I'll talk to you soon.008$
+008Kind Regards, Dr. Grace

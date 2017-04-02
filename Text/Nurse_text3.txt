@@ -1,0 +1,7 @@
+000 001$
+001Carrie: So how's Mr. Carter doing? Still trying to save Kim Kardashian?002$
+002You: Nope, seems like he's back in this world. The medicine might not be perfect, but it does the trick.003$
+003Carrie: It sure does. Great work today, Dr. Moore. Why don't you go check your computer back in your office before the end of the day?004$
+004Carrie: I think Dr. Grace mentioned that she sent you an email.005$
+005You: Will do, anything else for the day?006$
+006Carrie: Nope, I'm pretty sure that's it! See you tomorrow.
