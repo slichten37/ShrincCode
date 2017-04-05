@@ -29,6 +29,7 @@ public class ActivateTextAtLine : MonoBehaviour {
     public GameObject[] NPCToShow;
 
     public bool changeTime;
+    public bool sendPlayerToOffice;
 
     public FadeIn TimeWindow;
 
@@ -163,6 +164,10 @@ public class ActivateTextAtLine : MonoBehaviour {
         {
             TimeWindow.NPCToShow = NPCToShow;
             TimeWindow.NPCToHide = NPCToHide;
+            if (sendPlayerToOffice)
+            {
+                TimeWindow.sendPlayerToOffice = true;
+            }
             TimeWindow.setIsReady(true);
         }
         else

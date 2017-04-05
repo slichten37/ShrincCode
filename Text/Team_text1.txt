@@ -103,9 +103,11 @@
 101Dr. G: Oh, and at some point we should talk about clozapine. It's a super-special second gen drug, the strongest one. It's the only antipsychotic shown to reduce the risk of suicide, which is a huge deal in this population. But clozapine can kill you too, in other ways. If I've ever seen a 'miracle,' it has been with this drug. But it's definitely not first line.102$
 102Dr. G: So, Dr. Moore, I think that's enough of me talking. What shall we give the man?103$
 103Z: You: How about haloperidol, a first gen agent?107*
-104X: You: How about risperidone, a second gen agent?108*
+104X: You: How about risperidone, a second gen agent?109*
 105C: 103*
 106V: 103*
-107Dr. G: Solid choice! I started people off with haloperidol all the time when I was a resident. We'll see how he does.~~1
-108Dr. G: sounds great! A lot of people reach for risperidone first, all other things being equal. I'll bet he'll be better after a few doses.~~2
+107Dr. G: Solid choice! I started people off with haloperidol all the time when I was a resident. We'll see how he does.108$
+108Dr. G: I think that's it for today. Feel free to head home for the day and we'll see how Mr. Carter responds to the treatment tomorrow.~~1
+109Dr. G: sounds great! A lot of people reach for risperidone first, all other things being equal. I'll bet he'll be better after a few doses.110$
+110Dr. G: I think that's it for today. Feel free to head home for the day and we'll see how Mr. Carter responds to the treatment tomorrow.~~2
 

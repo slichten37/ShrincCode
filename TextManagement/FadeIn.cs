@@ -13,6 +13,7 @@ public class FadeIn : MonoBehaviour {
     public bool isReady;
     public bool timeSet;
     public bool fadedIn;
+    public bool sendPlayerToOffice;
 
     public PlayerMovement player;
 
@@ -64,6 +65,12 @@ public class FadeIn : MonoBehaviour {
             }
             HideVisibleNPCs();
             ShowHiddenNPCs();
+            if (sendPlayerToOffice)
+            {
+                player.transform.Translate(new Vector3(-47.5f - (player.transform.position.x), -10.5f - (player.transform.position.y), 0));
+                player.GetComponent<SpriteRenderer>().sprite = player.eastSprite;
+                sendPlayerToOffice = false;
+            }
             float t = (Time.time - startTime) / duration;
             sprite.color = new Color(1f, 1f, 1f, Mathf.SmoothStep(maximum, minimum, t));
 
