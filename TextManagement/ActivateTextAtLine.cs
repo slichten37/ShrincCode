@@ -28,11 +28,16 @@ public class ActivateTextAtLine : MonoBehaviour {
     public GameObject[] NPCToHide;
     public GameObject[] NPCToShow;
 
+    public bool changeTime;
+
+    public FadeIn TimeWindow;
+
 
     // Use this for initialization
     void Start() {
         theTextBox = FindObjectOfType<TextBoxManager>();
         alert = FindObjectOfType<AlertMovement>();
+        TimeWindow = FindObjectOfType<FadeIn>();
 
     }
 
@@ -51,18 +56,11 @@ public class ActivateTextAtLine : MonoBehaviour {
             isReady = false;
             theTextBox.ReloadScript(theText);
             theTextBox.currentLine = startLine;
-            if (option1 != null)
-            {
-                theTextBox.option1 = option1;
-            }
-            if (option2 != null)
-            {
-                theTextBox.option2 = option2;
-            }
-            if (nextBox != null)
-            {
-                theTextBox.nextBox = nextBox;
-            }
+            
+            theTextBox.option1 = option1;
+            theTextBox.option2 = option2;
+            theTextBox.nextBox = nextBox;
+            
             theTextBox.EnableTextBox(); // begin dialogue stage after 'return' button press
 
             if (destroyWhenActivated) //remove shoutzone
@@ -129,6 +127,10 @@ public class ActivateTextAtLine : MonoBehaviour {
 
     public void ShowHiddenNPCs() //for game state changes after dialogue
     {
+        if (changeTime)
+        {
+            return;
+        }
         for (int i = 0; i < NPCToShow.Length; i++)
         {
             NPCToShow[i].GetComponent<Renderer>().enabled = true;
@@ -141,6 +143,10 @@ public class ActivateTextAtLine : MonoBehaviour {
 
     public void HideVisibleNPCs()
     {
+        if (changeTime)
+        {
+            return;
+        }
         for (int i = 0; i < NPCToHide.Length; i++)
         {
             NPCToHide[i].GetComponent<Renderer>().enabled = false;
@@ -150,4 +156,20 @@ public class ActivateTextAtLine : MonoBehaviour {
             }
         }
     }
+
+    public void Progress()
+    {
+        if (changeTime)
+        {
+            TimeWindow.NPCToShow = NPCToShow;
+            TimeWindow.NPCToHide = NPCToHide;
+            TimeWindow.setIsReady(true);
+        }
+        else
+        {
+            HideVisibleNPCs();
+            ShowHiddenNPCs();
+        }
+    }
+
 }

@@ -60,9 +60,11 @@ public class TextBoxManager : MonoBehaviour {
 
         if(!isActive)
         {
+            player.canMove = true;
             return;
         }
 
+        player.canMove = false;
         if (textLines[currentLine].Contains("*")) //4 options, each has its own line it can jump to.
         {
             /****************
@@ -228,14 +230,12 @@ public class TextBoxManager : MonoBehaviour {
                 if (textLines[currentLine].Contains("~~1"))
                 {
                     option1.setIsReady(true);
-                    option1.ShowHiddenNPCs();
-                    option1.HideVisibleNPCs();
+                    option1.Progress();
                 }
                 else if (textLines[currentLine].Contains("~~2"))
                 { 
                     option2.setIsReady(true);
-                    option2.ShowHiddenNPCs();
-                    option2.HideVisibleNPCs();
+                    option2.Progress();
                 }
                 DisableTextBox();
             }
@@ -245,11 +245,21 @@ public class TextBoxManager : MonoBehaviour {
             theText.text = textLines[currentLine].Substring(3, textLines[currentLine].Length - 3);
             if (Input.GetKeyDown(KeyCode.Return))
             {
-                nextBox.setIsReady(true);
-                nextBox.ShowHiddenNPCs();
-                nextBox.HideVisibleNPCs();
+                if (nextBox != null)
+                {
+                    nextBox.setIsReady(true);
+                    nextBox.Progress();
+                }
                 DisableTextBox();
             }
+        }
+        if (textLines[currentLine].Contains("You:") || (textLines[currentLine].Contains("%") && inOptions))
+        {
+            theText.color = Color.green;
+        }
+        else
+        {
+            theText.color = Color.white;
         }
         
 

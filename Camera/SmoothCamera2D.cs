@@ -16,13 +16,13 @@ public class SmoothCamera2D : MonoBehaviour
         {
             newY = -12.5f;
         }
-        if (newX > -30.6)
+        if (newX > -24.5)
         {
-            newX = -30.6f;
+            newX = -24.5f;
         }
-        if (newX < -40.5)
+        if (newX < -47)
         {
-            newX = -40.5f;
+            newX = -47f;
         }
         transform.position = new Vector3(newX, newY, -10); // Camera follows the player but 6 to the right
     }

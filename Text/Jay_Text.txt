@@ -1,0 +1,11 @@
+000 001$
+001Jay: Hi Doc.002$
+002Option Z: You: Yo yo yooooo005*
+003Option X: You: What's up006*
+004Option C: You: How are ya today?007*
+010Option V:002*
+005Jay: Why are you talking like that?002$
+006Jay: Not much...002$
+007Jay: Feeling a little better, thanks for asking :).008$
+008You: That's good to hear!
+
