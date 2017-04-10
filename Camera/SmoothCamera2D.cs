@@ -3,7 +3,13 @@ using System.Collections;
 
 public class SmoothCamera2D : MonoBehaviour
 {
+
     public Transform player;
+    public AudioClip background_music;
+    void Start()
+    {
+        GetComponent<AudioSource>().Play();
+    }
     void Update()
     {
         float newX = player.position.x;

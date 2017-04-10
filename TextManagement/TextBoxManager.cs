@@ -25,13 +25,17 @@ public class TextBoxManager : MonoBehaviour {
     public ActivateTextAtLine nextBox;
 
     public bool inOptions;
+    public bool played;
 
     String[] optionStarters;
     int[] optionTrackers;
 
+    public AudioClip open;
+
     // Use this for initialization
     void Start()
     {
+        played = false;
         player = FindObjectOfType<PlayerMovement>();
         inOptions = false;
         optionStarters = new String[] { "Z: ", "X: ", "C: ", "V: " };
@@ -256,10 +260,17 @@ public class TextBoxManager : MonoBehaviour {
         if (textLines[currentLine].Contains("You:") || (textLines[currentLine].Contains("%") && inOptions))
         {
             theText.color = Color.green;
+            if (!played)
+            {
+                GetComponent<AudioSource>().PlayOneShot(open);
+                played = true;
+            }
+
         }
         else
         {
             theText.color = Color.white;
+            played = false;
         }
         
 
@@ -267,7 +278,7 @@ public class TextBoxManager : MonoBehaviour {
 
     public void EnableTextBox() //external call to begin dialogue stage.
     {
-
+        GetComponent<AudioSource>().PlayOneShot(open);
         textBox.SetActive(true);
         isActive = true;
 
