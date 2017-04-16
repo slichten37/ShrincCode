@@ -1,0 +1,12 @@
+000 001$
+001Welcome to SHRINC!002$
+002This is your office, where you will start each day of work.003$
+003Have you been here before? How many cases have you previously worked on?004$
+004Z: You: I haven't actually worked on any cases yet.008*
+005X: You: I've already completed the first case with Bill... where's my couch?009*
+006C: You: I'm already 2 cases in!010*
+007V: You: I'm already 3 cases in!010*
+008Great! We'll start you from the beginning then..~~1
+009Great! We'll start you off on the second case then..~~2
+010I don't believe you! There's only 1 case right now anyway!011$
+011We'll just start you from the beginning...~~1

@@ -85,7 +85,7 @@
 083Dr G: Patients with schizophrenia do often end up on mood stabilizers, but it's not the first thing we reach for.077$
 084Dr. G: Yes, that is the best way to start. Antipsychotics will target the most important symptoms, while also potentially providing a some sedation. They treat the positive symptoms, like hallucinations, a lot better than the negative symptoms. It usually reassures people when I say that we are good at shutting the voices up.085$
 085Dr. G: Now, for antipsychotics overall, what do you know about side effects and risks?086$
-086You: Well, the can cause seizures. And Torsades.087$
+086You: Well, they can cause seizures. And Torsades.087$
 087Dr. G: Take a little step back. We don't think of them as causing seizures usually, but rather decreasing the seizure threshold. And the frightening heart rhythm, Torsades de Pointes, is really a secondary result.088$
 088Dr. G: What they do is prolong the QT interval, the part that encompasses the depolarization and repolarization of the ventricles. We get EKGs on everyone we want to start on antipsychotics, to make sure their Qt is OK before we start. Often, we use the QTc, since it's an easy number to work with.089$
 089You: But, what do you do with a pyschotic person who has a long QTc?090$

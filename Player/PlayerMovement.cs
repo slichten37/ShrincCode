@@ -32,13 +32,13 @@ public class PlayerMovement : MonoBehaviour {
             return;
         }
 
-		if (!isMoving) {
+        if (!isMoving) {
 
-            input = new Vector2 (Input.GetAxis ("Horizontal"), Input.GetAxis ("Vertical"));
-			if (Mathf.Abs(input.x) > Mathf.Abs(input.y))
-				input.y = 0;
-			else
-				input.x = 0;
+            input = new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"));
+            if (Mathf.Abs(input.x) > Mathf.Abs(input.y))
+                input.y = 0;
+            else
+                input.x = 0;
 
             if (input.x < 0)
             {
@@ -57,7 +57,7 @@ public class PlayerMovement : MonoBehaviour {
                 currentDir = Direction.North;
             }
 
-            switch (currentDir)
+            /*switch (currentDir)
             {
                 case Direction.North:
                     gameObject.GetComponent<SpriteRenderer>().sprite = northSprite;
@@ -71,17 +71,65 @@ public class PlayerMovement : MonoBehaviour {
                 case Direction.West:
                     gameObject.GetComponent<SpriteRenderer>().sprite = westSprite;
                     break;
-            }
+            }*/
 
             if (input != Vector2.zero) {
-                if (Input.GetAxisRaw("Horizontal") > 0.5f || Input.GetAxisRaw("Horizontal") < -0.5f)
-                {
-                    transform.Translate(new Vector3(Input.GetAxisRaw("Horizontal") * walkSpeed*2 * Time.deltaTime, 0f, 0f));
+                if (currentDir == Direction.South || currentDir == Direction.North) {
+                    if (Input.GetAxisRaw("Horizontal") > 0.5f || Input.GetAxisRaw("Horizontal") < -0.5f)
+                    {
+                        transform.Translate(new Vector3(Input.GetAxisRaw("Horizontal") * walkSpeed * 2 * Time.deltaTime, 0f, 0f));
+                        if (Input.GetAxisRaw("Horizontal") > 0.5f)
+                        {
+                            gameObject.GetComponent<SpriteRenderer>().sprite = eastSprite;
+                        }
+                        else
+                        {
+                            gameObject.GetComponent<SpriteRenderer>().sprite = westSprite;
+                        }
+                    }
+                    else if (Input.GetAxisRaw("Vertical") > 0.5f || Input.GetAxisRaw("Vertical") < -0.5f)
+                    {
+                        transform.Translate(new Vector3(0f, Input.GetAxisRaw("Vertical") * walkSpeed * 2 * Time.deltaTime, 0f));
+                        if (Input.GetAxisRaw("Vertical") > 0.5f)
+                        {
+                            gameObject.GetComponent<SpriteRenderer>().sprite = northSprite;
+                        }
+                        else
+                        {
+                            gameObject.GetComponent<SpriteRenderer>().sprite = southSprite;
+                        }
+                    }
                 }
-                if (Input.GetAxisRaw("Vertical") > 0.5f || Input.GetAxisRaw("Vertical") < -0.5f)
+                else
                 {
-                    transform.Translate(new Vector3(0f, Input.GetAxisRaw("Vertical") * walkSpeed*2 * Time.deltaTime, 0f));
+                   
+                    if (Input.GetAxisRaw("Vertical") > 0.5f || Input.GetAxisRaw("Vertical") < -0.5f)
+                    {
+                        transform.Translate(new Vector3(0f, Input.GetAxisRaw("Vertical") * walkSpeed * 2 * Time.deltaTime, 0f));
+                        if (Input.GetAxisRaw("Vertical") > 0.5f)
+                        {
+                            gameObject.GetComponent<SpriteRenderer>().sprite = northSprite;
+                        }
+                        else
+                        {
+                            gameObject.GetComponent<SpriteRenderer>().sprite = southSprite;
+                        }
+                    }
+                    else if (Input.GetAxisRaw("Horizontal") > 0.5f || Input.GetAxisRaw("Horizontal") < -0.5f)
+                    {
+                        transform.Translate(new Vector3(Input.GetAxisRaw("Horizontal") * walkSpeed * 2 * Time.deltaTime, 0f, 0f));
+                        if (Input.GetAxisRaw("Horizontal") > 0.5f)
+                        {
+                            gameObject.GetComponent<SpriteRenderer>().sprite = eastSprite;
+                        }
+                        else
+                        {
+                            gameObject.GetComponent<SpriteRenderer>().sprite = westSprite;
+                        }
+                    }
                 }
+
+                //StartCoroutine(Move(transform));
             }
 		}
 	}
@@ -93,10 +141,11 @@ public class PlayerMovement : MonoBehaviour {
 		t = 0;
 
 		endPos = new Vector3 (startPos.x + System.Math.Sign (input.x), startPos.y + System.Math.Sign (input.y), startPos.z);
+       
 
 		while (t < 1f) {
 
-			t += Time.deltaTime * walkSpeed;
+			t += Time.deltaTime * walkSpeed * 2;
 			entity.position = Vector3.Lerp(startPos, endPos, t);
 			yield return null;
 		}
