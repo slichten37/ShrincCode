@@ -56,7 +56,7 @@ public class ActivateTextAtLine : MonoBehaviour {
 
             isReady = false;
             theTextBox.ReloadScript(theText);
-            theTextBox.currentLine = 1;
+            theTextBox.currentLine = 0;
             
             theTextBox.option1 = option1;
             theTextBox.option2 = option2;

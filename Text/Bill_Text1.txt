@@ -12,8 +12,7 @@
 011Bill: But I only got as far as Efland, because the police pulled me over.012$
 012You: The report says something about you going over 120 miles an hour. Is that why you got pulled over?013$
 013Bill: No, it's because they had orders that I was too important an agent, so I had to be put in witness protection, which is here.014$
-014Bill: They wanted me to be in the hand. And you know, a bird in the hand is worth two in the bush...015$
-015Bill: ...who I protected when he was president.016$
+014Bill: They wanted me to be in the hand. And you know, a bird in the hand is worth two in the bush...who I protected when he was president.016$
 016You: This sounds like it was kind of frightening. Now that you are here, do you feel safe?017$
 017Bill: Well, I guess. I mean, the one nurse is in MI-6, and sometimes she whispers me a secret message from Pippa Middleton. We're engaged.018$
 018You: Okaaaaay. Do you have any medical problems?019$

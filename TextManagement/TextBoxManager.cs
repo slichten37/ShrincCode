@@ -69,6 +69,10 @@ public class TextBoxManager : MonoBehaviour {
         }
 
         player.canMove = false;
+        if (theText.text.Length < 2)
+        {
+            setNext(001);
+        }
         if (textLines[currentLine].Contains("*")) //4 options, each has its own line it can jump to.
         {
             /****************
