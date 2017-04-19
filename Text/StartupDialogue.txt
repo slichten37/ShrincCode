@@ -1,4 +1,3 @@
-000 001$
 001Welcome to SHRINC!002$
 002This is your office, where you will start each day of work.003$
 003Have you been here before? How many cases have you previously worked on?004$

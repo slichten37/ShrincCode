@@ -1,6 +1,6 @@
-﻿000 999$
-999(Dr. Grace is sitting at the table patiently, waiting for team to start. She has a large stack of papers, and is holding her reading glasses)001$
-001Dr. G: Good morning, Samantha, how are you?002$
+000 001$
+001(Dr. Grace is sitting at the table patiently, waiting for team to start. She has a large stack of papers, and is holding her reading glasses)999$
+999Dr. G: Good morning, Samantha, how are you?002$
 002Z: You: Fine, thanks.006*
 003X: You: Actually, kind of rough.007*
 004C: 002*
@@ -10,7 +10,7 @@
 008Dr. G: Well, shall we get started?009$
 009You: Sure. Bill Carter is a 25 year old male with a history of cannabis use, who presents after having been brought in by police for extreme speeding and erratic behavior.010$
 010Dr G: Hm. Is this his first time doing something strange? Was he on anything?011$
-011You: As far as we know he has no other psych history. And just cannabis in the Utox.012$
+011You: As far as we know he has no other psych history.  And just cannabis in the Utox.012$
 012Dr. G: What else?017%4
 013You: He says he's married to Pippa Middleton.018%
 014You: He says he's in witness protection023%
@@ -64,50 +64,4 @@
 062Dr. G: He is very delusional, isn't he? I have to say though, for it to be delusional disorder, the delusions have to be non-bizarre, like being shot or poisoned. And the patient can't show other signs of schizophrenia, which he does. Really, these people often seem to have it pretty well together, except for that one or few things they are really odd about.040$
 063Dr. G: Of course! We should always think about medical causes. It's an even bigger issue as people get older and are prone to delirium. This is one of the reasons we always get basic labs on our people. You know, a metabolic panel, CBC, TSH, Urine tox and analysis, maybe b12 and folate if we have a reason to suspect malnutrition.064$
 064Dr. G: And neurological illnesses are always possible too, like a tumor or epilepsy. We do sometimes get an MRI, EEG, or even lumbar puncture. Our suspicion has to be pretty high for that, though.040$
-065Dr. G: What shall we diagnose him with?066$
-066Z: You: Substance Induced Psychotic Disorder; he as marijuana in his U tox.070*
-067X: You: Well, assuming a long enough time, schizophrenia.072*
-068C: You: Bipolar Disorder. This crazy crap sounds manic.071*
-069V: 066*
-070Dr. G: Well, it certainly could be. Even marijuana by itself can make some people psychotic. But I though the time course was more chronic? 065$
-071Dr. G: Hah, yes manic people definitely do things like this, and can be very psychotic. But I didn't think he was endorsing any mood disturbance.065$
-072Dr. G: It does sound like it. Now, diagnoses in psychiatry are always subject to change as time passes and we get more information. But this is a pretty good working hypothesis. Now, let's think about treatment. Has he been violent?073$
-073You: No, just weird.074$
-074Dr. G: Great! So we will hopefully not need to force any medications. I hate giving people shots, but sometimes we have to. Often, psychotic people are distressed by their symptoms, and describe being anxious or unable to sleep. For that reason, I sometimes present medication as something to help them sleep, or 'take the edge off'.075$
-075Dr. G: Of course, if they understand that they are hallucinating, they usually want to make it stop and you can frame the suggestion in those terms. Often, patients with insight might have had the disease for a while, or might not be as ill as those who are wholly convinced of the things they are seeing and hearing.076$
-076You: Well, he seems pretty far gone. I don't think he's Pippa's type.077$
-077Dr. G: Well then, let's give him something.078$
-078Z: You: How about a benzodiazepine to chill him out?082*
-079X: You: Maybe he'd benefit from a mood stabilizer.083*
-080C: You: An antipsychotic. I don't know which one, though.084*
-081V: 078*
-082Dr. G: If he were a bit more agitated, absolutely I'd be willing to give him a little lorazepam. But that won't fix the biggest problem, per se.077$
-083Dr G: Patients with schizophrenia do often end up on mood stabilizers, but it's not the first thing we reach for.077$
-084Dr. G: Yes, that is the best way to start. Antipsychotics will target the most important symptoms, while also potentially providing a some sedation. They treat the positive symptoms, like hallucinations, a lot better than the negative symptoms. It usually reassures people when I say that we are good at shutting the voices up.085$
-085Dr. G: Now, for antipsychotics overall, what do you know about side effects and risks?086$
-086You: Well, they can cause seizures. And Torsades.087$
-087Dr. G: Take a little step back. We don't think of them as causing seizures usually, but rather decreasing the seizure threshold. And the frightening heart rhythm, Torsades de Pointes, is really a secondary result.088$
-088Dr. G: What they do is prolong the QT interval, the part that encompasses the depolarization and repolarization of the ventricles. We get EKGs on everyone we want to start on antipsychotics, to make sure their Qt is OK before we start. Often, we use the QTc, since it's an easy number to work with.089$
-089You: But, what do you do with a pyschotic person who has a long QTc?090$
-090Dr. G: Well, that's a risk-benefit analysis. Keeping their potassium above 4 and magnesium above 2 on your metabolic panel can help prevent problems. You can supplement if they are low. Honestly, we have to live with this risk a lot of the time. Some of these drugs are worse for the QTc than others, though, so you can make an informed decision.091$
-091You: OK, so there's two kinds of antipsychotics. Which should we start with?092$
-092Dr. G: I often pick based on the side effect profile. As you probably know, both first and second generation antipsychotics are thought to work via dopamine blockade. But the second generation drugs have some activity at other receptors too. Are you familiar with the side effect profile of the two classes?093$
-093You: Well, I think the short version is that the old ones make you stiff and twitchy, and the new ones make you fat.094$
-094Dr. G: Not too bad a generalization. You are right that the first generation agents are well know for extrapyramidal side effects. They can make patients feel very restless, which is know as akasthesia. Or they can cause dystonias, abnormal muscle contractions.095$
-095Dr. G:  You can often test for issues by trying to quickly move someone's arm up and down at the elbow. It their muscles resist you intermittently, that's called cogwheeling.096$
-096Dr. G: Of course, people also talk about tardive dyskinesia. TD is a real issue, because it can be irreversible. People with TD have involuntary movements, often of their face and lips, but sometimes other parts of the body. They often don't notice, but it freaks the people around them out. Honestly, TD was much more of a problem in the old days, when we used higher drug doses. You'll still see it though.097$
-097You: So, I know people often start with a second generation agent.098$
-098Dr. G: Often we do, but you don't have to. In person who is already obese or has issues with their blood sugar or cholesterol, it might be better to use the older drugs than something which will make them hungry all the time.099$
-099Dr. G:  But in young, healthy people, we will start these medications and get annual hemoglobin A1Cs and lipid panels, and track their weight. Second generation agents can be very sedating too, which can be an advantage or a disadvantage.100$
-100You: Mm hm.....101$
-101Dr. G: Oh, and at some point we should talk about clozapine. It's a super-special second gen drug, the strongest one. It's the only antipsychotic shown to reduce the risk of suicide, which is a huge deal in this population. But clozapine can kill you too, in other ways. If I've ever seen a 'miracle,' it has been with this drug. But it's definitely not first line.102$
-102Dr. G: So, Dr. Moore, I think that's enough of me talking. What shall we give the man?103$
-103Z: You: How about haloperidol, a first gen agent?107*
-104X: You: How about risperidone, a second gen agent?109*
-105C: 103*
-106V: 103*
-107Dr. G: Solid choice! I started people off with haloperidol all the time when I was a resident. We'll see how he does.108$
-108Dr. G: I think that's it for today. Feel free to head home for the day and we'll see how Mr. Carter responds to the treatment tomorrow.~~1
-109Dr. G: sounds great! A lot of people reach for risperidone first, all other things being equal. I'll bet he'll be better after a few doses.110$
-110Dr. G: I think that's it for today. Feel free to head home for the day and we'll see how Mr. Carter responds to the treatment tomorrow.~~2
-
+065Dr. G: Alrighty then!

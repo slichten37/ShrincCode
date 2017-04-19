@@ -6,7 +6,7 @@ public class FadeIn : MonoBehaviour {
 
     public float minimum = 0.0f;
     public float maximum = 1f;
-    public float duration = 5.0f;
+    public float duration = 3.0f;
     private float startTime;
     public SpriteRenderer sprite;
 

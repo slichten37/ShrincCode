@@ -12,6 +12,7 @@ public class TextBoxManager : MonoBehaviour {
     public TextAsset textFile;
     public string[] textLines;
     public int currentLine;
+    public string lastLine;
     public int next;
 
     public bool isActive;
@@ -26,6 +27,7 @@ public class TextBoxManager : MonoBehaviour {
 
     public bool inOptions;
     public bool played;
+    public bool inBack;
 
     String[] optionStarters;
     int[] optionTrackers;
@@ -46,7 +48,7 @@ public class TextBoxManager : MonoBehaviour {
             textLines = (textFile.text.Split('\n'));
         }
 
-        if(isActive)
+        if (isActive)
         {
             EnableTextBox();
         } else
@@ -68,11 +70,30 @@ public class TextBoxManager : MonoBehaviour {
             return;
         }
 
-        player.canMove = false;
-        if (theText.text.Length < 2)
+        if (inBack)
         {
-            setNext(001);
+            if (Input.GetKeyDown(KeyCode.Return))
+            {
+                inBack = false;
+            }
+            return;
         }
+
+        if (Input.GetKeyDown(KeyCode.B))
+        {
+            theText.text = lastLine;
+            if (lastLine.Contains("You:")) {
+                theText.color = Color.green;
+            }
+            else
+            {
+                theText.color = Color.white;
+            }
+            inBack = true;
+            return;
+        }
+
+        player.canMove = false;
         if (textLines[currentLine].Contains("*")) //4 options, each has its own line it can jump to.
         {
             /****************
@@ -83,6 +104,7 @@ public class TextBoxManager : MonoBehaviour {
             theText.text = textLines[currentLine].Substring(3, textLines[currentLine].Length - 8) + "\n" + textLines[currentLine + 1].Substring(3, textLines[currentLine + 1].Length - 8) + "\n" + textLines[currentLine + 2].Substring(3, textLines[currentLine + 2].Length - 8) + "\n" + textLines[currentLine + 3].Substring(3, textLines[currentLine + 3].Length - 8);
             if (Input.GetKeyDown(KeyCode.Z))
             {
+                lastLine = theText.text.ToString();
                 int x = textLines[currentLine].Length;
                 next = int.Parse(textLines[currentLine].Substring(x - 5, 3));
                 setNext(next);
@@ -91,17 +113,20 @@ public class TextBoxManager : MonoBehaviour {
             if (Input.GetKeyDown(KeyCode.X))
             {
                 int x = textLines[currentLine + 1].Length;
+                lastLine = theText.text.ToString();
                 next = int.Parse(textLines[currentLine + 1].Substring(x - 5, 3));
                 setNext(next);
             }
             if (Input.GetKeyDown(KeyCode.C))
             {
+                lastLine = theText.text.ToString();
                 int x = textLines[currentLine + 2].Length;
                 next = int.Parse(textLines[currentLine + 2].Substring(x - 5, 3));
                 setNext(next);
             }
             if (Input.GetKeyDown(KeyCode.V))
             {
+                lastLine = theText.text.ToString();
                 int x = textLines[currentLine + 3].Length;
                 next = int.Parse(textLines[currentLine + 3].Substring(x - 5, 3));
                 setNext(next);
@@ -113,6 +138,7 @@ public class TextBoxManager : MonoBehaviour {
 
             if (Input.GetKeyDown(KeyCode.Return))
             {
+                lastLine = theText.text.ToString();
                 int x = textLines[currentLine].Length;
 
                 next = int.Parse(textLines[currentLine].Substring(x - 5, 3));
@@ -132,6 +158,7 @@ public class TextBoxManager : MonoBehaviour {
                 theText.text = textLines[currentLine].Substring(3, textLines[currentLine].Length - 9); // the prompter
                 if (Input.GetKeyDown(KeyCode.Return))
                 {
+                    lastLine = theText.text.ToString();
                     inOptions = true;
                 }
             }
@@ -172,6 +199,7 @@ public class TextBoxManager : MonoBehaviour {
                 }
                 if (Input.GetKeyDown(KeyCode.Z)) // if option z is chosen, jump to the corresponding 'next line'
                 {
+                    lastLine = theText.text.ToString();
                     int a = optionTrackers[0]; //helps find which line to parse for nextLine
                     int x = textLines[currentLine + a].Length;
                     next = int.Parse(textLines[currentLine + a].Substring(x - 5, 3));
@@ -188,6 +216,7 @@ public class TextBoxManager : MonoBehaviour {
                     }
                     else
                     {
+                        lastLine = theText.text.ToString();
                         int a = optionTrackers[1];
                         int x = textLines[currentLine + a].Length;
                         next = int.Parse(textLines[currentLine + a].Substring(x - 5, 3));
@@ -204,6 +233,7 @@ public class TextBoxManager : MonoBehaviour {
                     }
                     else
                     {
+                        lastLine = theText.text.ToString();
                         int a = optionTrackers[2];
                         int x = textLines[currentLine + a].Length;
                         next = int.Parse(textLines[currentLine + a].Substring(x - 5, 3));
@@ -220,6 +250,7 @@ public class TextBoxManager : MonoBehaviour {
                     }
                     else
                     {
+                        lastLine = theText.text.ToString();
                         int a = optionTrackers[3];
                         int x = textLines[currentLine + a].Length;
                         next = int.Parse(textLines[currentLine + a].Substring(x - 5, 3));
@@ -285,6 +316,7 @@ public class TextBoxManager : MonoBehaviour {
         GetComponent<AudioSource>().PlayOneShot(open);
         textBox.SetActive(true);
         isActive = true;
+        currentLine = 0;
 
         if (stopPlayerMovement) //freeze player during dialogue;
         {

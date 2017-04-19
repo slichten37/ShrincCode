@@ -1,0 +1,6 @@
+001Welcome to SHRINC! To progress the dialogue box, press 'Enter'.002$
+002To navigate the map, use the arrow keys or WASD.003$
+003When an exclamation mark appears above your head, press 'Enter' to interact.004$
+004During a conversation, if you want to see what the last line was, just press 'b'. You won't be able to go back and choose a different option, but you'll be able to see what was on the screen.005$
+005After pressing 'b', just press 'Enter' to return to your current line.006$
+006Have fun!

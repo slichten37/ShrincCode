@@ -1,0 +1,4 @@
+000 001$
+001You: So how are you feeling today Mr. Carter?002$
+002Bill: Doing much better, thanks to that medicine. Hope to be out of here soon.003$
+003You: I hope so too, glad you're feeling alright.

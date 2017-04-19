@@ -99,7 +99,7 @@ public class ActivateTextAtLine : MonoBehaviour {
             }
 
             theTextBox.ReloadScript(theText);
-            theTextBox.currentLine = 1;
+            theTextBox.currentLine = 0;
             theTextBox.EnableTextBox();
 
         }
@@ -134,7 +134,10 @@ public class ActivateTextAtLine : MonoBehaviour {
         }
         for (int i = 0; i < NPCToShow.Length; i++)
         {
-            NPCToShow[i].GetComponent<Renderer>().enabled = true;
+            if (NPCToShow[i].GetComponent<Renderer>() != null)
+            {
+                NPCToShow[i].GetComponent<Renderer>().enabled = true;
+            }
             if (NPCToShow[i].GetComponent<BoxCollider2D>() != null)
             {
                 NPCToShow[i].GetComponent<BoxCollider2D>().enabled = true;
@@ -150,7 +153,10 @@ public class ActivateTextAtLine : MonoBehaviour {
         }
         for (int i = 0; i < NPCToHide.Length; i++)
         {
-            NPCToHide[i].GetComponent<Renderer>().enabled = false;
+            if (NPCToHide[i].GetComponent<Renderer>() != null)
+            {
+                NPCToHide[i].GetComponent<Renderer>().enabled = false;
+            }
             if (NPCToHide[i].GetComponent<BoxCollider2D>() != null)
             {
                 NPCToHide[i].GetComponent<BoxCollider2D>().enabled = false;

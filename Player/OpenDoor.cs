@@ -36,6 +36,7 @@ public class OpenDoor : MonoBehaviour
                 door.GetComponent<BoxCollider2D>().enabled = false;
                 door2.GetComponent<Renderer>().enabled = false;
                 door2.GetComponent<BoxCollider2D>().enabled = false;
+                alert.GetComponent<Renderer>().enabled = false;
                 if (!doorOpen)
                 {
                     audio.PlayOneShot(open);
