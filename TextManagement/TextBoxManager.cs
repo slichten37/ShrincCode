@@ -23,6 +23,9 @@ public class TextBoxManager : MonoBehaviour {
 
     public ActivateTextAtLine option1;
     public ActivateTextAtLine option2;
+    public ActivateTextAtLine option3;
+    public ActivateTextAtLine option4;
+    public ActivateTextAtLine option5;
     public ActivateTextAtLine nextBox;
 
     public bool inOptions;
@@ -272,9 +275,24 @@ public class TextBoxManager : MonoBehaviour {
                     option1.Progress();
                 }
                 else if (textLines[currentLine].Contains("~~2"))
-                { 
+                {
                     option2.setIsReady(true);
                     option2.Progress();
+                }
+                else if (textLines[currentLine].Contains("~~3"))
+                {
+                    option3.setIsReady(true);
+                    option3.Progress();
+                }
+                else if (textLines[currentLine].Contains("~~4"))
+                {
+                    option4.setIsReady(true);
+                    option4.Progress();
+                }
+                else if (textLines[currentLine].Contains("~~5"))
+                {
+                    option5.setIsReady(true);
+                    option5.Progress();
                 }
                 DisableTextBox();
             }

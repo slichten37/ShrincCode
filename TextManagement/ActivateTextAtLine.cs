@@ -20,6 +20,9 @@ public class ActivateTextAtLine : MonoBehaviour {
 
     public ActivateTextAtLine option1;
     public ActivateTextAtLine option2;
+    public ActivateTextAtLine option3;
+    public ActivateTextAtLine option4;
+    public ActivateTextAtLine option5;
 
     public AlertMovement alert;
 
@@ -60,6 +63,10 @@ public class ActivateTextAtLine : MonoBehaviour {
             
             theTextBox.option1 = option1;
             theTextBox.option2 = option2;
+            theTextBox.option3 = option3;
+            theTextBox.option4 = option4;
+            theTextBox.option5 = option5;
+
             theTextBox.nextBox = nextBox;
             
             theTextBox.EnableTextBox(); // begin dialogue stage after 'return' button press
